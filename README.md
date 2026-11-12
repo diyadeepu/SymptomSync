@@ -1,1 +1,1 @@
-# Online-Medical-Care
+# SymptomSync
