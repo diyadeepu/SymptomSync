@@ -1,0 +1,4 @@
+/* Hide pages that are not currently active */
+.hidden-page { 
+    display: none; 
+}
