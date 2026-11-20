@@ -13,7 +13,12 @@
     <!-- Header -->
     <header class="bg-blue-600 text-white p-4 shadow-md flex justify-between items-center">
         <h1 class="text-xl font-bold">HealthTriage AI</h1>
-        <div id="user-status" class="text-sm">Not Logged In</div>
+        <div class="flex items-center gap-4">
+            <div id="user-status" class="text-sm">Not Logged In</div>
+            <button id="logout-btn" onclick="logoutUser()" class="hidden bg-blue-800 hover:bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded transition">
+                Sign Out
+            </button>
+        </div>
     </header>
 
     <main class="flex-grow flex items-center justify-center p-4">
