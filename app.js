@@ -80,6 +80,7 @@ function loginUser() {
 
     if (foundUser) {
         document.getElementById('user-status').innerText = 'Logged in as: ' + foundUser.first + ' ' + foundUser.last;
+        document.getElementById('logout-btn').classList.remove('hidden'); // Show Sign Out button
         document.getElementById('login-email').value = '';
         document.getElementById('login-password').value = '';
         showPage('page-welcome');
@@ -91,7 +92,20 @@ function loginUser() {
 
 function guestLogin() {
     document.getElementById('user-status').innerText = 'Guest User';
+    document.getElementById('logout-btn').classList.remove('hidden'); // Show Sign Out button
     showPage('page-welcome');
+}
+
+// Sign Out Logic
+function logoutUser() {
+    document.getElementById('user-status').innerText = 'Not Logged In';
+    document.getElementById('logout-btn').classList.add('hidden'); // Hide Sign Out button
+    
+    // Clear any in-progress triage inputs
+    document.getElementById('concern-text').value = '';
+    document.getElementById('common-concern').value = '';
+    
+    showPage('page-login');
 }
 
 // Form handling logic
